@@ -19,7 +19,10 @@ return new class extends Migration
             $table->integer('metodo_pago');
             $table->string('estado');
             $table->timestamps();
+            
+            $table->foreignId('usuario_id')->references('id')->on('usuarios');
         });
+        
     }
 
     /**
