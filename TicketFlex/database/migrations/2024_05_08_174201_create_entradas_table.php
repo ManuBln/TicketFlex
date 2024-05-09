@@ -13,17 +13,12 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('eventos', function (Blueprint $table) {
+        Schema::create('entradas', function (Blueprint $table) {
             $table->id();
-            $table->string("nombre_evento");
-            $table->decimal("precio", 8, 2);
-            $table->dateTime("fecha_hora");
-            $table->text("descripcion");
-            $table->integer("aforo");
-            $table->integer("aforo_disponible");
             $table->timestamps();
 
-            $table->foreignId("sala_id")->references("id")->on("salas")->onDelete("cascade");
+            $table->foreignId('evento_id')->references('id')->on('eventos')->onDelete('cascade');
+            $table->foreignId('usuario_id')->references('id')->on('usuarios')->onDelete('cascade');
         });
     }
 
@@ -34,6 +29,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('eventos');
+        Schema::dropIfExists('entradas');
     }
 };
