@@ -1,18 +1,22 @@
 <template>
   <div>
-    <navbar class="custom-navbar" />
+    <navbar/>
     <Carrousel />
+    <AboutUs />
+    <Footer />
   </div>
 </template>
 
 <script>
 import Carrousel from './VueFlux.vue';
+import Footer from './footer.vue';
 import navbar from './navbar.vue';
+import AboutUs from './aboutus.vue';
 
 
 export default {
   components: {
-    navbar,   Carrousel
+    navbar,   Carrousel , Footer , AboutUs, 
     
   }
 }

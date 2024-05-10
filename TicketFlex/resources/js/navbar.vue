@@ -8,7 +8,7 @@
             <li><a href="#">Tienda</a></li>
             <li><a href="#">Contacto</a></li>
           </ul>
-          <button type="button">Inicia Sesión </button>
+          <button type="button"><a href="/login">Iniciar sesión</a></button>
         </nav>
 </template>
 
