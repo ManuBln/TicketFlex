@@ -3,12 +3,14 @@
 
 <head>
     <!-- Encabezado de tu página -->
-    <title>Vue en Laravel</title>
+    <title>TicketFlex
+    </title>
 </head>
 
 <body>
     <!-- Contenido de tu página -->
-    <example-component>Hola</example-component>
+    <div id="home">
+    </div>
     <script src="{{ mix('js/app.js') }}"></script>
 </body>
 
