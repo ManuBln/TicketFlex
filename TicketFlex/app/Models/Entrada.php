@@ -18,8 +18,15 @@ class Entrada extends Model
         'total',
     ];
 
+    // ------------------------------------------Relaciones------------------------------------------
+
     public function evento() //Relación uno a muchos
     {
         return $this->belongsTo(Evento::class);
+    }
+
+    public function usuario() //Relación uno a muchos
+    {
+        return $this->belongsTo(Usuario::class);
     }
 }

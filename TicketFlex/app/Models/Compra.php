@@ -9,9 +9,9 @@ class Compra extends Model
 {
     use HasFactory;
 
-    protected $table = 'compras';//Nombre de la tabla en la base de datos
+    protected $table = 'compras'; //Nombre de la tabla en la base de datos
 
-    protected $fillable = [//Campos que se pueden modificar y/o insertar datos masivamente
+    protected $fillable = [ //Campos que se pueden modificar y/o insertar datos masivamente
         'precio',
         'metodo_pago',
         'estado',
@@ -20,7 +20,13 @@ class Compra extends Model
 
     // ------------------------------------------Relaciones------------------------------------------
 
-    public function usuario(){
+    public function usuario()
+    {
         return $this->belongsTo(Usuario::class);
+    }
+
+    public function articulos()
+    {
+        return $this->belongsToMany(Articulo::class, 'detalle_compras', 'compra_id', 'articulo_id')->withPivot('cantidad');
     }
 }
