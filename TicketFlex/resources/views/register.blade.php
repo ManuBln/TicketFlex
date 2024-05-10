@@ -9,7 +9,7 @@
 
 <body style="background: black;">
     <!-- Contenido de tu página -->
-    <div id="home">
+    <div id="register">
         
     </div>
     <script src="{{ mix('js/app.js') }}"></script>
